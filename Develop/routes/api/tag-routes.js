@@ -79,7 +79,7 @@ router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
   Tag.destroy({
     where: {
-      id: RegExp.params.id
+      id: req.params.id
     }
   })
   .then(dbTagData => {
